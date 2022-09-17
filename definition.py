@@ -8,10 +8,10 @@ from bs4 import BeautifulSoup
 #print(soup.prettify())
 
 def definition_finder():
-    url_wourdle = "https://www.tomsguide.com/news/what-is-todays-wordle-answer"
+    url_wordle = "https://www.tomsguide.com/news/what-is-todays-wordle-answer"
 
     #calls the requests lib
-    resultW = requests.get(url_wourdle)
+    resultW = requests.get(url_wordle)
 
     #make sure wesbite is accessible, should return 200
     #print(result.status_code)
@@ -28,7 +28,7 @@ def definition_finder():
     #print(tagsW.string)
 
     #words =[] #list of the words inside tag strong
-    wourdle = tagsW.string #the wourdle of the day
+    wordle = tagsW.string #the wordle of the day
 
     #appends the words inside the tag
     #for tag in tagsW.string.split():
@@ -37,11 +37,11 @@ def definition_finder():
     #finds the wordle by looking after string "is"
     #for i in range(len(words)):
     #    if(words[i] == "is"):
-    #        wourdle = words[i + 1]
+    #        wordle = words[i + 1]
             
-    #print(wourdle)
+    #print(wordle)
 
-    url_def = "https://www.vocabulary.com/dictionary/" + wourdle
+    url_def = "https://www.vocabulary.com/dictionary/" + wordle
     resultD = requests.get(url_def)
     #print(resultD.status_code)
 
@@ -69,9 +69,10 @@ def definition_finder():
 
     return(definition)
 
+'''
 def main():
     print(definition_finder())
 
 if __name__ == "__main__":
     main()
-
+'''
