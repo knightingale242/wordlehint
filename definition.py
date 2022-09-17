@@ -69,10 +69,10 @@ def definition_finder():
 
     return(definition)
 
-'''
+
 def main():
     print(definition_finder())
 
 if __name__ == "__main__":
     main()
-'''
+
